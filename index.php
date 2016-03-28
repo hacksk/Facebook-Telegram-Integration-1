@@ -4,8 +4,6 @@
 
 <?php
 
-phpinfo();
-
 //Get the POST data from Telegram
 $inp = file_get_contents('php://input');
 
@@ -17,7 +15,7 @@ fclose($fp);
 */
 
 //Decode the JSON
-$input = json_decode($inp, true, 512, JSON_BIGINT_AS_STRING);
+$input = json_decode($inp, false, 512, JSON_BIGINT_AS_STRING);
 //json_decode($inp);
 
 //Get Shit from Fb [Graph API result]
