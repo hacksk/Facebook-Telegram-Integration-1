@@ -36,7 +36,8 @@ function writeMsg($var) {
 $url = 'https://api.telegram.org/bot187593023:AAECXd8sx9yyjTC_d65U1ZpbLeoHtuGKTXk/sendMessage';
 $data = array(
     'chat_id' => $input->{'message'}->{'chat'}->{'id'},
-    'text' =>  $var
+    'text' =>  $var,
+    'disable_notification' => 'true'
 );
 
 $options = array(
