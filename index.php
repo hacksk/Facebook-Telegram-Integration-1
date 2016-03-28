@@ -15,7 +15,8 @@ fclose($fp);
 */
 
 //Decode the JSON
-$input = json_decode($inp);
+$input = json_decode(preg_replace('/("\w+"):(\d+(\.\d+)?)/', '\\1:"\\2"', $inp), true);
+//json_decode($inp);
 
 //Get Shit from Fb [Graph API result]
 //This token is linked to my account. Someone please look into changing it to a page auth
