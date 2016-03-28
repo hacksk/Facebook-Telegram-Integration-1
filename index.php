@@ -19,7 +19,7 @@ $input = json_decode($inp);
 
 //Get Shit from Fb [Graph API result]
 //This token is linked to my account. Someone please look into changing it to a page auth
-$resultFB = file_get_contents("https://graph.facebook.com/tinkerhub/posts?access_token=CAACEdEose0cBAEBrnEz1SSABxEBMgzmd3BUT0oZAWTIVBxWdhOI5Ra68SG25vd89fot6IGGJCdIgxlp5RWv0NxvosPH5tdycEB0EoOy5kC680SzDQZCDpggj1uRn8KOn50f0VfTXFXhfqUfdWAvTCuCBvjFwVpb8BAMv7BICvYifIZCApSCkOBvAAAyXlrhxKFxre0ZB9wZDZD");
+$resultFB = file_get_contents("https://graph.facebook.com/1549751131951442/feed?access_token=483465641838113|GW7RtlsNHb3U3zcFj39HIQiFF1E");
 
 //Just for testing
 /*
