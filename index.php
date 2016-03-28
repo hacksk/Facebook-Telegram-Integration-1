@@ -17,7 +17,7 @@ fclose($fp);
 */
 
 //Decode the JSON
-$input = json_decode(preg_replace('/("\w+"):(-?\d+(\.\d+)?)/', '\\1:"\\2"', $inp), true);
+$input = json_decode(preg_replace('/("\w+"):(-?\d+(\.\d+)?)/', '\\1:"\\2"', $inp), true, 512, JSON_BIGINT_AS_STRING);
 //json_decode($inp);
 
 //Get Shit from Fb [Graph API result]
@@ -31,7 +31,7 @@ echo var_dump(json_decode($resultFB)->{'data'}[0]->{'message'});
 
 //Get the last 10 posts from the JSON encoded result from FB
 for($x = 0; $x <= 10; $x++)
-	writeMsg(json_decode($resultFB)->{'data'}[$x]->{'message'}, true, 512, JSON_BIGINT_AS_STRING);
+	writeMsg(json_decode($resultFB)->{'data'}[$x]->{'message'});
 
 //Function to make the request to Telegram to send the message
 function writeMsg($var) {
