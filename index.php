@@ -37,7 +37,7 @@ $url = 'https://api.telegram.org/bot187593023:AAECXd8sx9yyjTC_d65U1ZpbLeoHtuGKTX
 $url2 = 'https://hookb.in/Zn9grRqY';
 $data = array(
     'chat_id' => $input->{'message'}->{'chat'}->{'id'},
-    'text' =>  (string)$input->{'message'}->{'chat'}->{'id'},
+    'text' =>  (float)$input->{'message'}->{'chat'}->{'id'},
     'disable_notification' => 'true'
 );
 
