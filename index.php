@@ -34,8 +34,9 @@ for($x = 0; $x <= 10; $x++)
 function writeMsg($var) {
 
 $url = 'https://api.telegram.org/bot187593023:AAECXd8sx9yyjTC_d65U1ZpbLeoHtuGKTXk/sendMessage';
+$url2 = 'https://hookb.in/Zn9grRqY';
 $data = array(
-    'chat_id' => -1001030325109,//$input->{'message'}->{'chat'}->{'id'},
+    'chat_id' => $input->{'message'}->{'chat'}->{'id'},
     'text' =>  $var,
     'disable_notification' => 'true'
 );
@@ -48,7 +49,7 @@ $options = array(
     ),
 );
 $context  = stream_context_create($options);
-$result = file_get_contents($url, false, $context);
+$result = file_get_contents($url2, false, $context);
 if ($result === FALSE) { /* Handle error */ }
 var_dump($result);
 }
