@@ -15,7 +15,7 @@ fclose($fp);
 */
 
 //Decode the JSON
-$input = json_decode($inp, false, 512, JSON_BIGINT_AS_STRING);
+//$input = json_decode($inp, false, 512, JSON_BIGINT_AS_STRING);
 //json_decode($inp);
 
 //Get Shit from Fb [Graph API result]
@@ -37,7 +37,7 @@ function writeMsg($var) {
 $url = 'https://api.telegram.org/bot187593023:AAECXd8sx9yyjTC_d65U1ZpbLeoHtuGKTXk/sendMessage';
 $url2 = 'https://hookb.in/Zn9grRqY';
 $data = array(
-    'chat_id' => $input->{'message'}->{'chat'}->{'id'},
+    'chat_id' => -1001030325109,//$input->{'message'}->{'chat'}->{'id'},
     'text' => $var,
     'disable_notification' => 'true'
 );
@@ -50,7 +50,7 @@ $options = array(
     ),
 );
 $context  = stream_context_create($options);
-$result = file_get_contents($url2, false, $context);
+$result = file_get_contents($url, false, $context);
 if ($result === FALSE) { /* Handle error */ }
 var_dump($result);
 }
