@@ -17,7 +17,7 @@ fclose($fp);
 */
 
 //Decode the JSON
-$input = json_decode(preg_replace('/("\w+"):(-?\d+(\.\d+)?)/', '\\1:"\\2"', $inp), true, 512, JSON_BIGINT_AS_STRING);
+$input = json_decode($inp, true, 512, JSON_BIGINT_AS_STRING);
 //json_decode($inp);
 
 //Get Shit from Fb [Graph API result]
